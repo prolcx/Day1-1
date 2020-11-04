@@ -1,0 +1,19 @@
+<h1>My Cart</h1>
+
+{{#if empty}}
+    <h2>Your cart is empty</h2>
+{{/if}}
+
+{{#if notempty}}
+<h2>There are {{count}} in your cart</h2>
+<table>
+
+
+{{#each myCart}}
+
+<div>
+    {{this.name}},{{this.quantity}}
+</div>
+{{/each}}
+</table>
+{{/if}}
